@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://kit.fontawesome.com/8a932749f6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <p class="letter_r">R</p>
+        <nav class="navbar hidden-xs">
+            <a class="link" href="#home">Home.</a>
+            <a class="link" href="#pages">Pages.</a>
+            <a class="link" href="#pages">Features.</a>
+            <a class="link" href="#pages">Elements.</a>
+            <div class="dropdown">
+                <button class="dropbtn">News.</button>
+                <div class="dropdown-content">
+                    <a class="sublink" href="#">Blog Default</a>
+                    <a class="sublink" href="#">Blog Filter</a>
+                    <a class="sublink" href="#">Blog Full Grid</a>
+                    <a class="sublink" href="#">Blog Masonary</a>
+                    <a class="sublink" href="#">Blog Details</a>
+                    <a class="sublink" href="#">Blog Details Full Grid</a>
+                </div>
+            </div>
+        </nav>
+        <div class="contact_details">
+            <p class="hidden-xs">Call Us <a class="phone" href="tel:880762009">880.762.009</a></p>
+            <div class="select_box">
+                <i class="fas fa-caret-down language_icon"></i>
+                <select class="language" name="language" id="language">
+                    <option value="volvo">EN</option>
+                    <option value="volvo">EN</option>
+                </select>
+            </div>
+            <button class="contact_btn hidden-xs">Contact Us<span class="icon"><i
+                        class="fas fa-arrow-right"></i></span></button>
+            <div class="nav-bar visible-xs"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn">×</a>
+        <a href="#">Home.</a>
+        <a href="#">Pages.</a>
+        <a href="#">Features.</a>
+        <a href="#">Elements.</a>
+        <div class="main_accordian">
+            <div class="accordian_item">
+                <div class="accordian_title">News<span class="icon"><i class="fas fa-plus plus"></i><i
+                            class="fas fa-minus minus"></i></div>
+                <div class="accordian_content">
+                    <a class="sublink" href="#">Blog Default</a>
+                    <a class="sublink" href="#">Blog Filter</a>
+                    <a class="sublink" href="#">Blog Full Grid</a>
+                    <a class="sublink" href="#">Blog Masonary</a>
+                    <a class="sublink" href="#">Blog Details</a>
+                    <a class="sublink" href="#">Blog Details Full Grid</a>
+                </div>
+            </div>
+        </div>
+        <div class="contact_details">
+            <p class="call">Call Us</p> <a class="phone" href="tel:880762009">880.762.009</a>
+        </div>
+        <button class="contact_btn">Contact Us<span class="icon"><i class="fas fa-arrow-right"></i></span></button>
+    </div>
+
+    <main>
+        <section class="banner">
+            <div class="slideshow-container">
+                <article class="mySlides fade">
+                    <div class="banner_img">
+                        <img src="img/bg.jpg" class="img-responsive">
+                        <div class="banner_text_wrap">
+                            <p class="adv_tag"><span class="color_red">70% Off</span> for first 3 months</p>
+                            <h1 class="banner_title">Digital Agency with Excellence Services</h1>
+                            <p class="para">The 3 golden rules professional graphic designer don't want you to know
+                                about
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="mySlides fade">
+                    <div class="banner_img">
+                        <img src="img/bg.jpg" class="img-responsive">
+                        <div class="banner_text_wrap">
+                            <p class="adv_tag"><span class="color_red">70% Off</span> for first 3 months</p>
+                            <h1 class="banner_title">Digital Agency 1 with Excellence Services</h1>
+                            <p class="para">The 3 golden rules professional graphic designer don't want you to know
+                                about
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="mySlides fade">
+                    <div class="banner_img">
+                        <img src="img/bg.jpg" class="img-responsive">
+                        <div class="banner_text_wrap">
+                            <p class="adv_tag"><span class="color_red">70% Off</span> for first 3 months</p>
+                            <h1 class="banner_title">Digital Agency 2 with Excellence Services</h1>
+                            <p class="para">The 3 golden rules professional graphic designer don't want you to know
+                                about
+                            </p>
+                        </div>
+                    </div>
+                </article>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+        $(".closebtn").click(function () {
+            $(".sidebar").css("transform", "translateX(-100%)");
+        })
+        $(".nav-bar").click(function () {
+            $(".sidebar").css("transform", "translateX(0)");
+        })
+        $(".accordian_title").click(function () {
+            $(this).parent().toggleClass("active");
+            $(this).parent().siblings().removeClass("active");
+            $(this).parent().find(".accordian_content").slideToggle();
+        })
+        $(".dropdown").click(function () {
+            $(this).toggleClass("show");
+        })
+    </script>
+</body>
+
+</html>
